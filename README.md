@@ -1,17 +1,26 @@
 # Auto Work
 
-Career dashboard for application tracking, interview preparation, local drafts, and optional read-only inbox imports.
+I built Auto Work to keep the different parts of a job search together. I can track applications, prepare for interviews, organize scheduling plans, and review reply drafts without switching between separate spreadsheets.
 
-## Technology
+I included separate personal and fictional demo workspaces, local backup and restore, and optional imports from Gmail and Calendar. The local app uses rules and templates for preparation. It does not send emails or submit applications.
 
-Python, JavaScript.
+## Built with
 
-## Run locally
+I used Python for the local server and JavaScript for the interface and worker.
 
-Run `python3 server.py` with Python 3.10 or later and open `http://localhost:8787`. No build or package installation is needed for the local dashboard. Start with the fictional demo workspace. Optional document import dependencies are in `requirements-optional.txt`.
+## Inside the project
 
-## Portfolio snapshot
+* `server.py`: the local server and import bridge.
+* `dist/`: the interface served by the local app.
+* `worker/`: the hosted worker implementation.
+* `tests/`: server and workflow checks.
 
-This repository contains a source snapshot of a personal project. Personal records, credentials, browser sessions, local databases, and generated output are excluded. Use your own configuration and fictional data when evaluating it. Some integrations require external accounts or additional setup. This is a development project, with feature limitations documented in the source and guides.
+## Running it
 
-See [the project guide](PROJECT_GUIDE.md) for implementation details and earlier development notes. Verification claims in that guide describe the original working copy; they are not a fresh end-to-end test of this portfolio snapshot.
+I start the local app with `python3 server.py` and open `http://localhost:8787`. Python 3.10 or later is required. I use Explore demo to try it with fictional information.
+
+## More detail
+
+* [Project guide](PROJECT_GUIDE.md)
+* [Optional Google setup](docs/GOOGLE_SETUP.md)
+* [Worker setup](docs/AUTOMATION.md)
